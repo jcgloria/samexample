@@ -595,11 +595,11 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[11] = list[i];
     	return child_ctx;
     }
 
-    // (1:0) <script>  let email;  let name;  let age;  let empleados = fetchData();  function refresh() {   empleados = fetchData();  }
+    // (1:0) <script>  let url = "https://gmg11j751m.execute-api.us-east-1.amazonaws.com"; // Indicate API URL  let email;  let name;  let age;  let empleados = fetchData();  function refresh() {   empleados = fetchData();  }
     function create_catch_block(ctx) {
     	const block = { c: noop, m: noop, p: noop, d: noop };
 
@@ -607,7 +607,7 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(1:0) <script>  let email;  let name;  let age;  let empleados = fetchData();  function refresh() {   empleados = fetchData();  }",
+    		source: "(1:0) <script>  let url = \\\"https://gmg11j751m.execute-api.us-east-1.amazonaws.com\\\"; // Indicate API URL  let email;  let name;  let age;  let empleados = fetchData();  function refresh() {   empleados = fetchData();  }",
     		ctx
     	});
 
@@ -643,7 +643,7 @@ var app = (function () {
     	let dispose;
     	let each_value = /*empleados*/ ctx[3];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*empleado*/ ctx[9].email;
+    	const get_key = ctx => /*empleado*/ ctx[11].email;
     	validate_each_keys(ctx, each_value, get_each_context, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -689,39 +689,39 @@ var app = (function () {
     			attr_dev(input0, "placeholder", "Correo");
     			attr_dev(input0, "aria-label", "Correo");
     			attr_dev(input0, "aria-describedby", "basic-addon1");
-    			add_location(input0, file, 46, 5, 955);
+    			add_location(input0, file, 46, 5, 1037);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "placeholder", "Nombre");
     			attr_dev(input1, "aria-label", "Nombre");
     			attr_dev(input1, "aria-describedby", "basic-addon1");
-    			add_location(input1, file, 54, 5, 1136);
+    			add_location(input1, file, 54, 5, 1218);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "placeholder", "Edad");
     			attr_dev(input2, "aria-label", "Edad");
     			attr_dev(input2, "aria-describedby", "basic-addon1");
-    			add_location(input2, file, 62, 5, 1316);
+    			add_location(input2, file, 62, 5, 1398);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "btn btn-success");
-    			add_location(button, file, 70, 5, 1491);
+    			add_location(button, file, 70, 5, 1573);
     			attr_dev(div0, "class", "input-group mb-3");
-    			add_location(div0, file, 45, 4, 919);
-    			add_location(div1, file, 44, 3, 909);
+    			add_location(div0, file, 45, 4, 1001);
+    			add_location(div1, file, 44, 3, 991);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file, 80, 6, 1670);
+    			add_location(th0, file, 80, 6, 1752);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file, 81, 6, 1704);
+    			add_location(th1, file, 81, 6, 1786);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file, 82, 6, 1738);
-    			add_location(tr, file, 79, 5, 1659);
-    			add_location(thead, file, 78, 4, 1646);
-    			add_location(tbody, file, 85, 4, 1792);
+    			add_location(th2, file, 82, 6, 1820);
+    			add_location(tr, file, 79, 5, 1741);
+    			add_location(thead, file, 78, 4, 1728);
+    			add_location(tbody, file, 85, 4, 1874);
     			attr_dev(table, "class", "table");
-    			add_location(table, file, 77, 3, 1620);
+    			add_location(table, file, 77, 3, 1702);
     			attr_dev(div2, "class", "container");
     			set_style(div2, "margin-top", "1%");
-    			add_location(div2, file, 43, 2, 858);
+    			add_location(div2, file, 43, 2, 940);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -811,15 +811,15 @@ var app = (function () {
     function create_each_block(key_1, ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*empleado*/ ctx[9].email + "";
+    	let t0_value = /*empleado*/ ctx[11].email + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*empleado*/ ctx[9].name + "";
+    	let t2_value = /*empleado*/ ctx[11].name + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*empleado*/ ctx[9].age + "";
+    	let t4_value = /*empleado*/ ctx[11].age + "";
     	let t4;
     	let t5;
 
@@ -837,10 +837,10 @@ var app = (function () {
     			td2 = element("td");
     			t4 = text(t4_value);
     			t5 = space();
-    			add_location(td0, file, 88, 7, 1870);
-    			add_location(td1, file, 89, 7, 1903);
-    			add_location(td2, file, 90, 7, 1935);
-    			add_location(tr, file, 87, 6, 1858);
+    			add_location(td0, file, 88, 7, 1952);
+    			add_location(td1, file, 89, 7, 1985);
+    			add_location(td2, file, 90, 7, 2017);
+    			add_location(tr, file, 87, 6, 1940);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -857,9 +857,9 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*empleados*/ 8 && t0_value !== (t0_value = /*empleado*/ ctx[9].email + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*empleados*/ 8 && t2_value !== (t2_value = /*empleado*/ ctx[9].name + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*empleados*/ 8 && t4_value !== (t4_value = /*empleado*/ ctx[9].age + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*empleados*/ 8 && t0_value !== (t0_value = /*empleado*/ ctx[11].email + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*empleados*/ 8 && t2_value !== (t2_value = /*empleado*/ ctx[11].name + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*empleados*/ 8 && t4_value !== (t4_value = /*empleado*/ ctx[11].age + "")) set_data_dev(t4, t4_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -877,22 +877,35 @@ var app = (function () {
     	return block;
     }
 
-    // (41:19)    <p>Cargando...</p>  {:then empleados}
+    // (37:19)    <div style="display:grid;place-items:center;">    <div class="spinner-border" role="status">     <span class="visually-hidden">Loading...</span>      </div>   </div>  {:then empleados}
     function create_pending_block(ctx) {
-    	let p;
+    	let div1;
+    	let div0;
+    	let span;
 
     	const block = {
     		c: function create() {
-    			p = element("p");
-    			p.textContent = "Cargando...";
-    			add_location(p, file, 41, 2, 818);
+    			div1 = element("div");
+    			div0 = element("div");
+    			span = element("span");
+    			span.textContent = "Loading...";
+    			attr_dev(span, "class", "visually-hidden");
+    			add_location(span, file, 39, 4, 850);
+    			attr_dev(div0, "class", "spinner-border");
+    			attr_dev(div0, "role", "status");
+    			add_location(div0, file, 38, 3, 803);
+    			set_style(div1, "display", "grid");
+    			set_style(div1, "place-items", "center");
+    			add_location(div1, file, 37, 2, 753);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, span);
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(div1);
     		}
     	};
 
@@ -900,7 +913,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(41:19)    <p>Cargando...</p>  {:then empleados}",
+    		source: "(37:19)    <div style=\\\"display:grid;place-items:center;\\\">    <div class=\\\"spinner-border\\\" role=\\\"status\\\">     <span class=\\\"visually-hidden\\\">Loading...</span>      </div>   </div>  {:then empleados}",
     		ctx
     	});
 
@@ -928,7 +941,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file, 39, 0, 789);
+    			add_location(main, file, 35, 0, 724);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -968,14 +981,10 @@ var app = (function () {
     	return block;
     }
 
-    async function fetchData() {
-    	const response = await fetch("https://asd.execute-api.us-east-1.amazonaws.com/items"); //Indicate API URL here
-    	return await response.json();
-    }
-
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
+    	let url = "https://gmg11j751m.execute-api.us-east-1.amazonaws.com"; // Indicate API URL
     	let email;
     	let name;
     	let age;
@@ -985,9 +994,14 @@ var app = (function () {
     		$$invalidate(3, empleados = fetchData());
     	}
 
+    	async function fetchData() {
+    		const response = await fetch(url + "/items");
+    		return await response.json();
+    	}
+
     	async function doPost() {
-    		const res = await fetch("https://asd.execute-api.us-east-1.amazonaws.com/items", {
-    			method: "POST", //Indicate API URL here
+    		const res = await fetch(url + "/items", {
+    			method: "POST",
     			body: JSON.stringify({ email, name, age })
     		});
 
@@ -1026,6 +1040,7 @@ var app = (function () {
     	}
 
     	$$self.$capture_state = () => ({
+    		url,
     		email,
     		name,
     		age,
@@ -1036,6 +1051,7 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
+    		if ('url' in $$props) url = $$props.url;
     		if ('email' in $$props) $$invalidate(0, email = $$props.email);
     		if ('name' in $$props) $$invalidate(1, name = $$props.name);
     		if ('age' in $$props) $$invalidate(2, age = $$props.age);

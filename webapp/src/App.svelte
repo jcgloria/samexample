@@ -1,5 +1,5 @@
 <script>
-	let url = "https://asd.execute-api.us-east-1.amazonaws.com" // Indicate API URL
+	let url = "https://asd.execute-api.us-east-1.amazonaws.com"; // Indicate API URL
 	let email;
 	let name;
 	let age;
@@ -8,23 +8,18 @@
 		empleados = fetchData();
 	}
 	async function fetchData() {
-		const response = await fetch(
-			url + "/items" 
-		);
+		const response = await fetch(url + "/items");
 		return await response.json();
 	}
 	async function doPost() {
-		const res = await fetch(
-			url + "/items", 
-			{
-				method: "POST",
-				body: JSON.stringify({
-					email: email,
-					name: name,
-					age: age,
-				}),
-			}
-		);
+		const res = await fetch(url + "/items", {
+			method: "POST",
+			body: JSON.stringify({
+				email: email,
+				name: name,
+				age: age,
+			}),
+		});
 		const json = await res.json();
 		if (json["ResponseMetadata"]["HTTPStatusCode"] == 200) {
 			console.log("OK");
@@ -40,7 +35,11 @@
 
 <main>
 	{#await empleados}
-		<p>Cargando...</p>
+		<div style="display:grid;place-items:center;">
+			<div class="spinner-border" role="status">
+				<span class="visually-hidden">Loading...</span>
+			  </div>
+		</div>
 	{:then empleados}
 		<div class="container" style="margin-top: 1%;">
 			<div>
