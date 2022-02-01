@@ -8,13 +8,13 @@
 	}
 	async function fetchData() {
 		const response = await fetch(
-			"https://zf6nfgm6ub.execute-api.us-east-1.amazonaws.com/items"
+			"https://asd.execute-api.us-east-1.amazonaws.com/items" //Indicate API URL here
 		);
 		return await response.json();
 	}
 	async function doPost() {
 		const res = await fetch(
-			"https://zf6nfgm6ub.execute-api.us-east-1.amazonaws.com/items",
+			"https://asd.execute-api.us-east-1.amazonaws.com/items", //Indicate API URL here
 			{
 				method: "POST",
 				body: JSON.stringify({
