@@ -689,39 +689,39 @@ var app = (function () {
     			attr_dev(input0, "placeholder", "Correo");
     			attr_dev(input0, "aria-label", "Correo");
     			attr_dev(input0, "aria-describedby", "basic-addon1");
-    			add_location(input0, file, 46, 5, 921);
+    			add_location(input0, file, 46, 5, 955);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "placeholder", "Nombre");
     			attr_dev(input1, "aria-label", "Nombre");
     			attr_dev(input1, "aria-describedby", "basic-addon1");
-    			add_location(input1, file, 54, 5, 1102);
+    			add_location(input1, file, 54, 5, 1136);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "placeholder", "Edad");
     			attr_dev(input2, "aria-label", "Edad");
     			attr_dev(input2, "aria-describedby", "basic-addon1");
-    			add_location(input2, file, 62, 5, 1282);
+    			add_location(input2, file, 62, 5, 1316);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "btn btn-success");
-    			add_location(button, file, 70, 5, 1457);
+    			add_location(button, file, 70, 5, 1491);
     			attr_dev(div0, "class", "input-group mb-3");
-    			add_location(div0, file, 45, 4, 885);
-    			add_location(div1, file, 44, 3, 875);
+    			add_location(div0, file, 45, 4, 919);
+    			add_location(div1, file, 44, 3, 909);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file, 80, 6, 1636);
+    			add_location(th0, file, 80, 6, 1670);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file, 81, 6, 1670);
+    			add_location(th1, file, 81, 6, 1704);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file, 82, 6, 1704);
-    			add_location(tr, file, 79, 5, 1625);
-    			add_location(thead, file, 78, 4, 1612);
-    			add_location(tbody, file, 85, 4, 1758);
+    			add_location(th2, file, 82, 6, 1738);
+    			add_location(tr, file, 79, 5, 1659);
+    			add_location(thead, file, 78, 4, 1646);
+    			add_location(tbody, file, 85, 4, 1792);
     			attr_dev(table, "class", "table");
-    			add_location(table, file, 77, 3, 1586);
+    			add_location(table, file, 77, 3, 1620);
     			attr_dev(div2, "class", "container");
     			set_style(div2, "margin-top", "1%");
-    			add_location(div2, file, 43, 2, 824);
+    			add_location(div2, file, 43, 2, 858);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -837,10 +837,10 @@ var app = (function () {
     			td2 = element("td");
     			t4 = text(t4_value);
     			t5 = space();
-    			add_location(td0, file, 88, 7, 1836);
-    			add_location(td1, file, 89, 7, 1869);
-    			add_location(td2, file, 90, 7, 1901);
-    			add_location(tr, file, 87, 6, 1824);
+    			add_location(td0, file, 88, 7, 1870);
+    			add_location(td1, file, 89, 7, 1903);
+    			add_location(td2, file, 90, 7, 1935);
+    			add_location(tr, file, 87, 6, 1858);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -885,7 +885,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Cargando...";
-    			add_location(p, file, 41, 2, 784);
+    			add_location(p, file, 41, 2, 818);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -928,7 +928,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file, 39, 0, 755);
+    			add_location(main, file, 39, 0, 789);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -969,7 +969,7 @@ var app = (function () {
     }
 
     async function fetchData() {
-    	const response = await fetch("https://zf6nfgm6ub.execute-api.us-east-1.amazonaws.com/items");
+    	const response = await fetch("https://asd.execute-api.us-east-1.amazonaws.com/items"); //Indicate API URL here
     	return await response.json();
     }
 
@@ -986,8 +986,8 @@ var app = (function () {
     	}
 
     	async function doPost() {
-    		const res = await fetch("https://zf6nfgm6ub.execute-api.us-east-1.amazonaws.com/items", {
-    			method: "POST",
+    		const res = await fetch("https://asd.execute-api.us-east-1.amazonaws.com/items", {
+    			method: "POST", //Indicate API URL here
     			body: JSON.stringify({ email, name, age })
     		});
 

@@ -1,4 +1,5 @@
 <script>
+	let url = "https://asd.execute-api.us-east-1.amazonaws.com" // Indicate API URL
 	let email;
 	let name;
 	let age;
@@ -8,13 +9,13 @@
 	}
 	async function fetchData() {
 		const response = await fetch(
-			"https://asd.execute-api.us-east-1.amazonaws.com/items" //Indicate API URL here
+			url + "/items" 
 		);
 		return await response.json();
 	}
 	async function doPost() {
 		const res = await fetch(
-			"https://asd.execute-api.us-east-1.amazonaws.com/items", //Indicate API URL here
+			url + "/items", 
 			{
 				method: "POST",
 				body: JSON.stringify({
