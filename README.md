@@ -1,5 +1,5 @@
-# samexample
-## AWS SAM Template Example. Serverless App with Lambda and API Gateway + Webapp
+# AWS SAM Example
+## Serverless App using AWS SAM that uses Lambda + API Gateway + DynamoDB. Includes Webapp to add and show data. 
 
 ##### 1. [Install AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) and configure AWS credentials.
 ##### 2. Run <code>sam deploy -g</code>
